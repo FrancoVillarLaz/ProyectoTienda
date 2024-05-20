@@ -8,8 +8,7 @@ import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
-@Getter
-@Setter
+
 @Entity
 @Table(name = "categorias")
 public class Categoria {
@@ -23,4 +22,36 @@ public class Categoria {
 
     @OneToMany(mappedBy = "categoria")
     private List<Producto> Producto;
+
+    public Integer getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(Integer idCategoria) {
+        this.idCategoria = idCategoria;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
+
+    public List<com.edp.proyectoTienda.persistencia.entities.Producto> getProducto() {
+        return Producto;
+    }
+
+    public void setProducto(List<com.edp.proyectoTienda.persistencia.entities.Producto> producto) {
+        Producto = producto;
+    }
 }
