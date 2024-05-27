@@ -13,4 +13,5 @@ public interface ProductRepository {
     void deleteById(int id);
     List<Product> findByCategory(int id);
     List<Product> findStockLess(int amount);
+    void updateProduct(Product product);
 }
