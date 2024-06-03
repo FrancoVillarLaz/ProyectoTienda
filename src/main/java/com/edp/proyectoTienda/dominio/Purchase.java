@@ -4,22 +4,20 @@ import java.sql.Date;
 
 public class Purchase {
     private int idPurchase;
-    private int idClient;
+    private String idClient;
     private Date date;
-    private String medioPago;
-    private String coment;
-    private Boolean state;
-    
+    private String comment;
+
     public int getIdPurchase() {
         return idPurchase;
     }
     public void setIdPurchase(int idPurchase) {
         this.idPurchase = idPurchase;
     }
-    public int getIdClient() {
+    public String getIdClient() {
         return idClient;
     }
-    public void setIdClient(int idClient) {
+    public void setIdClient(String idClient) {
         this.idClient = idClient;
     }
     public Date getDate() {
@@ -28,23 +26,11 @@ public class Purchase {
     public void setDate(Date date) {
         this.date = date;
     }
-    public String getMedioPago() {
-        return medioPago;
+    public String getComment() {
+        return comment;
     }
-    public void setMedioPago(String medioPago) {
-        this.medioPago = medioPago;
-    }
-    public String getComent() {
-        return coment;
-    }
-    public void setComent(String coment) {
-        this.coment = coment;
-    }
-    public Boolean getState() {
-        return state;
-    }
-    public void setState(Boolean state) {
-        this.state = state;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
     
 }

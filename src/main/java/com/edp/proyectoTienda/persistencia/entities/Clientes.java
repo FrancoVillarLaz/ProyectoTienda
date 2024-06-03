@@ -12,12 +12,11 @@ import java.util.List;
 @Table(name = "clientes")
 public class Clientes {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private String id;
 
     private String nombre;
     private String apellidos;
-    private Integer celular;
+    private Double celular;
     private String direccion;
     @Column(name = "correo_electronico")
     private String correoElectronico;
